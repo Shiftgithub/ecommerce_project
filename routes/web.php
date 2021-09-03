@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 
+use App\Http\Controllers\AdminController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +25,7 @@ Route::get('/redirect',[HomeController::class,'redirect']);
 
 //user
 Route::get('/',[HomeController::class,'index']);
+
+// Product part 
+Route::get('/products',[AdminController::class,'products']);
+Route::post('/uploadproductinfo',[AdminController::class,'uploadproductinfo']);
